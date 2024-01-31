@@ -1,0 +1,32 @@
+body {
+  font-family: "Ubuntu", moonspace, "Gill sans", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #efefef;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 1048px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  /* Add your mobile styles here */
+}
+
+/* For tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Add your tablet styles here */
+}
+
+/* For desktops */
+@media only screen and (min-width: 1025px) {
+  /* Add your desktop styles here */
+}

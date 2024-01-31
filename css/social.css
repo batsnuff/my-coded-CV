@@ -1,0 +1,17 @@
+.social {
+  padding-left: 16px;
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.icon {
+  font-size: 22px;
+  color: #2f5a78;
+  margin: 0 10px;
+}
+
+.fab {
+  font-weight: bold;
+}
