@@ -18,7 +18,10 @@ html {
 
 /* For mobile devices */
 @media only screen and (max-width: 767px) {
-  /* Add your mobile size here */
+  table {
+   max-width: 100%;
+   table-layout: fixed;
+  }
 }
 
 /* For tablets */
