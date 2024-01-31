@@ -18,15 +18,15 @@ html {
 
 /* For mobile devices */
 @media only screen and (max-width: 767px) {
-  /* Add your mobile styles here */
+  /* Add your mobile size here */
 }
 
 /* For tablets */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Add your tablet styles here */
+  /* Add your tablet size here */
 }
 
 /* For desktops */
 @media only screen and (min-width: 1025px) {
-  /* Add your desktop styles here */
+  /* Add your desktop size here */
 }
