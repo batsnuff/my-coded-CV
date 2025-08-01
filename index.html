@@ -1,140 +1,211 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>My CV</title>
-		<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/experience.css" rel="stylesheet">
-		<link href="css/intro.css" rel="stylesheet">
-		<link href="css/contactInfo.css" rel="stylesheet">
-		<link href="css/skills.css" rel="stylesheet">
-		<link href="css/social.css" rel="stylesheet">
-		<script defer src="js/script.js"></script>
-	</head>
-	<body>
-		<!--Intro-->
-		<div class="intro">
-		<img class="intro__pic" src="https://pbs.twimg.com/profile_images/443374604317229056/UvHpzPuV_400x400.jpeg" alt = "">
-		<div class="intro__prof">aspiring software tester/programmer</div>
-		<div class="intro__summary"><b>Hobbies and Interests:</b> new technologies, Web3, coding, using AI, Rubik's cube, reading popular science books, playing guitar, singing</div>	
-		<div class="intro__heading">Milosz Szczepaniak</div>
-		</div>
-		
-		<!--Contact Information-->
-		<div class="contactinfo">
-			<div class="contactinfo__icon">
-				<div class="fas fa-map-signs"></div>
-			</div>
-			<div class="contactinfo__data">Korczaka 3b, 66-500 Strzelce Krajeńskie</div>
-			<div class="contactinfo__icon">
-				<div class="fas fa-mobile-alt"></div>
-			</div>
-			<div class="contactinfo__data">+48 666 913 017</div>
-			<div class="contactinfo__icon">
-				<div class="fas fa-envelope"></div>
-			</div>
-			<div class="contactinfo__data">miloszszczepaniak@gmail.com</div>
-		</div>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Milosz Szczepaniak - CV - Aspiring Software Tester/Programmer">
+    <title>Milosz Szczepaniak - CV</title>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <!-- JavaScript -->
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <main class="cv-container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="https://pbs.twimg.com/profile_images/443374604317229056/UvHpzPuV_400x400.jpeg" 
+                         alt="Milosz Szczepaniak" 
+                         loading="lazy">
+                </div>
+                <div class="profile-info">
+                    <h1 class="name">Milosz Szczepaniak</h1>
+                    <p class="title">Aspiring Software Tester/Programmer</p>
+                    <p class="summary">
+                        <strong>Hobbies and Interests:</strong> New technologies, Web3, coding, using AI, 
+                        Rubik's cube, reading popular science books, playing guitar, singing
+                    </p>
+                </div>
+            </div>
+        </header>
 
-		<!--Skills Section delete % add animation-->
-		<div class="subheading">IT Skills</div>
-		<div class="skills">
-			<ul>
-				<li>
-					<div class="skill_name1">HTML</div>
-					<div class="skill_per">Good</div>
-				</li>
-				<li>
-					<div class="skill_name1">CSS</div>
-					<div class="skill_per">Good</div>
-				</li>
-				<li>
-					<div class="skill_name2">JavaScript</div>
-					<div class="skill_per">Intermediate</div>
-				</li>
-				<li>
-					<div class="skill_name2">Linux</div>
-					<div class="skill_per">Intermediate</div>
-				</li>
-				<li>
-					<div class="skill_name2">Python</div>
-					<div class="skill_per">Intermediate</div>
-				</li>
-				<li>
-					<div class="skill_name3">SQL</div>
-					<div class="skill_per">Beginner</div>
-				</li>						
-			</ul>
-		</div>
+        <!-- Contact Information -->
+        <section class="contact-section">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    <span>Korczaka 3b, 66-500 Strzelce Krajeńskie</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <a href="tel:+48666913017">+48 666 913 017</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <a href="mailto:miloszszczepaniak@gmail.com">miloszszczepaniak@gmail.com</a>
+                </div>
+            </div>
+        </section>
 
-		<!--Soft Skills-->
-		<div class="subheading">Soft Skills</div>
-		<table class="skills__table">
-    		<tbody>
-      			<tr>
-					<td>Independence</td>
-					<td>Bond to personal and professional development</td>
-        			<td>Analytical thinking</td>
-      			</tr>
-      			<tr>
-        			<td>Creativity</td>
-					<td>Good knowledge of prompt engineering</td>
-					<td>Detail-oriented</td>
-      			</tr>
-    		</tbody>
-  		</table>
-		</div>
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h2 class="section-title">IT Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card skill-good">
+                    <div class="skill-header">
+                        <h3>HTML</h3>
+                        <span class="skill-level">Good</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card skill-good">
+                    <div class="skill-header">
+                        <h3>CSS</h3>
+                        <span class="skill-level">Good</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card skill-intermediate">
+                    <div class="skill-header">
+                        <h3>JavaScript</h3>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card skill-intermediate">
+                    <div class="skill-header">
+                        <h3>Linux</h3>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card skill-intermediate">
+                    <div class="skill-header">
+                        <h3>Python</h3>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 55%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card skill-beginner">
+                    <div class="skill-header">
+                        <h3>SQL</h3>
+                        <span class="skill-level">Beginner</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 40%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		<!--Experience/Education-->
-		<div class="subheading">Experience (full listing on <b>LinkedIn</b>)</div>
-		<div class="explist">
-			<table class="explist__table">
-				<thead>
-					<tr>
-						<th>Nasto%</th>
-						<th>DGS</th>
-						<th>Byens Tømrerentreprise</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>01-06.2017</td>
-						<td>06.2017-06.2018</td>
-						<td>08-12.2021</td>
-					</tr>
-					<tr>
-						<td>Animator and Event organizer</td>
-						<td>SMT machine operator</td>
-						<td>Carpenter</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+        <!-- Soft Skills Section -->
+        <section class="soft-skills-section">
+            <h2 class="section-title">Soft Skills</h2>
+            <div class="soft-skills-grid">
+                <div class="soft-skill-item">
+                    <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                    <span>Independence</span>
+                </div>
+                <div class="soft-skill-item">
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    <span>Bond to personal and professional development</span>
+                </div>
+                <div class="soft-skill-item">
+                    <i class="fas fa-brain" aria-hidden="true"></i>
+                    <span>Analytical thinking</span>
+                </div>
+                <div class="soft-skill-item">
+                    <i class="fas fa-palette" aria-hidden="true"></i>
+                    <span>Creativity</span>
+                </div>
+                <div class="soft-skill-item">
+                    <i class="fas fa-robot" aria-hidden="true"></i>
+                    <span>Good knowledge of prompt engineering</span>
+                </div>
+                <div class="soft-skill-item">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <span>Detail-oriented</span>
+                </div>
+            </div>
+        </section>
 
-		<!--Social-->
-		<div class="subheading">Social</div>
-		<div class="social">
-			 <a href="https://twitter.com/batsnuff" target="_blank">
-				 <div class = "icon">
-					 <span style="padding-left:10px;"></span>
-					 <div class="fab fa-twitter-square">Twitter</div>
-				 </div>
-			 </a>
-			 <a href="https://linkedin.com/in/miłosz-szczepaniak-1708b9178" target="_blank">
-				 <div class="icon">
-					 <span style="padding-left:10px;"></span>
-					 <div class="fab fa-linkedin">LinkedIn</div>
-				</div>
-			 </a>
-			<a href="https://github.com/batsnuff?tab=repositories" target="_blank">
-				<div class = "icon">
-					<span style="padding-left:10px;"></span>
-				  <div class="fab fa-github">Github</div>
-				</div>
-			 </a>
-		</div>
-	</body>
+        <!-- Experience Section -->
+        <section class="experience-section">
+            <h2 class="section-title">Experience <small>(full listing on <a href="https://linkedin.com/in/miłosz-szczepaniak-1708b9178" target="_blank" rel="noopener">LinkedIn</a>)</small></h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">01-06.2017</div>
+                    <div class="timeline-content">
+                        <h3>Animator and Event organizer</h3>
+                        <p class="company">Nasto%</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">06.2017-06.2018</div>
+                    <div class="timeline-content">
+                        <h3>SMT machine operator</h3>
+                        <p class="company">DGS</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">08-12.2021</div>
+                    <div class="timeline-content">
+                        <h3>Carpenter</h3>
+                        <p class="company">Byens Tømrerentreprise</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Links -->
+        <section class="social-section">
+            <h2 class="section-title">Social</h2>
+            <div class="social-links">
+                <a href="https://twitter.com/batsnuff" target="_blank" rel="noopener" class="social-link twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="https://linkedin.com/in/miłosz-szczepaniak-1708b9178" target="_blank" rel="noopener" class="social-link linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/batsnuff?tab=repositories" target="_blank" rel="noopener" class="social-link github">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
 </html>

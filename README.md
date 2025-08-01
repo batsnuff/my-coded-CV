@@ -1,44 +1,107 @@
-# My CV Project
+# Modern CV - Milosz Szczepaniak
 
-## Overview
-This project is a my personal CV webpage designed to showcase the skills and experiences. The webpage is structured with different sections to provide a comprehensive overview of my professional background.
+A modern, responsive CV website built with current web standards and best practices.
 
-## File Structure
-- **index.html:** The main HTML file that structures the entire CV webpage.
-- **css/style.css:** Stylesheet file containing the general styling for the webpage.
-- **css/experience.css:** Stylesheet file specific to the experience section styling.
-- **css/intro.css:** Stylesheet file for the introductory section styling.
-- **css/contactInfo.css:** Stylesheet file for the contact information section styling.
-- **css/skills.css:** Stylesheet file for the skills section styling.
-- **css/social.css:** Stylesheet file for the social media links section styling.
-- **js/script.js:** JavaScript file for handling dynamic behavior and interactions on the webpage.
-- **README.md:** This file, providing an overview of the project.
+## ✨ Features
 
-## Sections
+### Modern Design
+- **Clean & Professional**: Modern card-based layout with subtle shadows and rounded corners
+- **Responsive Design**: Fully responsive across all devices (mobile, tablet, desktop)
+- **Accessibility**: WCAG compliant with proper semantic HTML and ARIA labels
+- **Print-Friendly**: Optimized for printing with dedicated print styles
 
-### Intro
-- Displays my profile picture, professional status, and a brief summary of my hobbies and interests.
+### Technical Improvements
+- **CSS Custom Properties**: Modern CSS variables for consistent theming
+- **CSS Grid & Flexbox**: Modern layout techniques for better responsiveness
+- **Smooth Animations**: Subtle animations and transitions for better UX
+- **Performance Optimized**: Lazy loading images and efficient CSS
 
-### Contact Information
-- Includes my address, phone number, and email address.
+### Interactive Elements
+- **Animated Skill Bars**: Visual representation of skill levels with smooth animations
+- **Hover Effects**: Interactive feedback on cards and buttons
+- **Print Button**: Easy printing functionality
+- **Smooth Scrolling**: Enhanced navigation experience
+
+## 🛠️ Technologies Used
+
+- **HTML5**: Semantic markup with proper accessibility
+- **CSS3**: Modern features including Grid, Flexbox, Custom Properties
+- **JavaScript (ES6+)**: Modern JavaScript with Intersection Observer API
+- **Font Awesome 6**: Modern icon library
+- **Google Fonts**: Inter font family for better typography
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: < 480px
+- **Tablet**: 480px - 768px  
+- **Desktop**: > 768px
+
+## 🎨 Design System
+
+### Colors
+- **Primary**: Blue (#2563eb)
+- **Accent**: Cyan (#06b6d4)
+- **Success**: Green (#10b981)
+- **Warning**: Orange (#f59e0b)
+- **Danger**: Red (#ef4444)
+
+### Typography
+- **Font Family**: Inter (Google Fonts)
+- **Font Sizes**: Responsive scale from 0.75rem to 2.25rem
+- **Line Height**: 1.6 for optimal readability
+
+### Spacing
+- **Consistent Scale**: 0.25rem to 4rem spacing system
+- **Responsive**: Adapts to screen size
+
+## 🚀 Getting Started
+
+1. Clone the repository
+2. Open `index.html` in your browser
+3. The CV is ready to view and print!
+
+## 📄 Sections
+
+1. **Header**: Profile image, name, title, and summary
+2. **Contact**: Address, phone, and email with clickable links
+3. **IT Skills**: Visual skill bars with progress indicators
+4. **Soft Skills**: Icon-based skill display
+5. **Experience**: Timeline-based work history
+6. **Social**: Links to professional profiles
+
+## 🔧 Customization
+
+### Colors
+Edit the CSS custom properties in `css/style.css`:
+```css
+:root {
+  --primary-color: #2563eb;
+  --accent-color: #06b6d4;
+  /* ... other colors */
+}
+```
+
+### Content
+Update the HTML content in `index.html` to match your information.
 
 ### Skills
-- Lists my IT skills with a rating, showcasing my proficiency in HTML, CSS, JavaScript, Linux, Python, and SQL.
+Modify skill levels by changing the `width` percentage in the skill progress bars.
 
-### Soft Skills
-- Highlights my soft skills, including independence, analytical thinking, creativity, prompt engineering, and a detail-oriented approach.
+## 📱 Browser Support
 
-### Experience/Education
-- Presents a table with details of my work experiences, including company names, timeframes, and roles.
+- Chrome 60+
+- Firefox 55+
+- Safari 12+
+- Edge 79+
 
-### Social
-- Provides links to my social media profiles on Twitter, LinkedIn, and GitHub.
+## 📄 License
 
-## External Dependencies
-- [Font Awesome](https://kit.fontawesome.com/b99e675b6e.js): External script for using Font Awesome icons.
+This project is open source and available under the [MIT License](LICENSE).
 
-## Usage
-1. Open the [LINK](https://batsnuff.github.io/my-coded-CV/) in a web browser to view my CV.
-2. Navigate through different sections to explore his skills, experiences, and social links.
+## 🤝 Contributing
 
-Feel free to customize and expand upon this project to suit your needs.
+Feel free to submit issues and enhancement requests!
+
+---
+
+**Built with modern web standards and best practices for optimal performance and user experience.**
