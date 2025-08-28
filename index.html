@@ -31,12 +31,26 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">MS</div>
-            <ul class="nav-menu">
-                <li><a href="#intro" class="nav-link">O mnie</a></li>
-                <li><a href="#skills" class="nav-link">Umiejętności</a></li>
-                <li><a href="#experience" class="nav-link">Doświadczenie</a></li>
-                <li><a href="#contact" class="nav-link">Kontakt</a></li>
-            </ul>
+                         <ul class="nav-menu">
+                 <li><a href="#intro" class="nav-link" data-lang="pl">O mnie</a></li>
+                 <li><a href="#intro" class="nav-link" data-lang="en">About</a></li>
+                 <li><a href="#skills" class="nav-link" data-lang="pl">Umiejętności</a></li>
+                 <li><a href="#skills" class="nav-link" data-lang="en">Skills</a></li>
+                 <li><a href="#experience" class="nav-link" data-lang="pl">Doświadczenie</a></li>
+                 <li><a href="#experience" class="nav-link" data-lang="en">Experience</a></li>
+                 <li><a href="#contact" class="nav-link" data-lang="pl">Kontakt</a></li>
+                 <li><a href="#contact" class="nav-link" data-lang="en">Contact</a></li>
+             </ul>
+                         <div class="language-toggle">
+                 <button id="language-toggle-btn" class="language-toggle-btn">
+                     <span id="language-text">PL</span>
+                 </button>
+             </div>
+             <div class="theme-toggle">
+                 <button id="theme-toggle-btn" class="theme-toggle-btn">
+                     <i class="fas fa-moon" id="theme-icon"></i>
+                 </button>
+             </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -54,12 +68,15 @@
                     <div class="hero-image-overlay"></div>
                 </div>
                 <div class="hero-text">
-                    <h1 class="hero-title">Milosz Szczepaniak</h1>
-                    <p class="hero-subtitle">Aspiring Software Tester/Programmer</p>
-                    <div class="hero-description">
-                        <h3>Hobbies and Interests:</h3>
-                        <p>new technologies, Web3, coding, using AI, Rubik's cube, reading popular science books, playing guitar, singing</p>
-                    </div>
+                                         <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000">Milosz Szczepaniak</h1>
+                     <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-lang="pl">Aspiring Software Tester/Programmer</p>
+                     <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-lang="en">Aspiring Software Tester/Programmer</p>
+                     <div class="hero-description" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                         <h3 data-lang="pl">Zainteresowania i Hobby:</h3>
+                         <h3 data-lang="en">Interests and Hobbies:</h3>
+                         <p data-lang="pl">Nowoczesne technologie, blockchain & Web3, programowanie, sztuczna inteligencja i zachwyt jej absurdalnie szybkim rozwojem, kostka Rubika (speed cubing), literatura popularnonaukowa i fantastyka, gra na gitarze oraz mniej i bardziej skuteczne próby opanowania podstaw na innych instrumentach, śpiew, komponowanie</p>
+                         <p data-lang="en">Modern technologies, blockchain & Web3, programming, artificial intelligence and fascination with its absurdly fast development, Rubik's cube (speed cubing), popular science literature and fantasy, playing guitar and more or less successful attempts to master basics on other instruments, singing, composing</p>
+                     </div>
                 </div>
             </div>
         </div>
@@ -68,36 +85,71 @@
     <!-- Contact Information -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Kontakt</h2>
+                         <h2 class="section-title" data-aos="fade-up" data-lang="pl">Kontakt</h2>
+             <h2 class="section-title" data-aos="fade-up" data-lang="en">Contact</h2>
             <div class="contact-grid">
                 <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <div class="contact-info">
-                        <h3>Adres</h3>
-                        <p>Korczaka 3b, 66-500 Strzelce Krajeńskie</p>
-                    </div>
+                                         <div class="contact-info">
+                         <h3 data-lang="pl">Adres</h3>
+                         <h3 data-lang="en">Address</h3>
+                         <p>
+                             <a href="https://www.google.com/maps/search/?api=1&query=Hengelo,+Netherlands" class="address-link" target="_blank">(currently) Hengelo, Netherlands</a>
+                             <button onclick="copyAddress()" class="copy-address-btn" title="Skopiuj adres">
+                                 <i class="fas fa-copy"></i>
+                             </button>
+                         </p>
+                     </div>
                 </div>
-                
+
                 <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="contact-icon">
                         <i class="fas fa-phone"></i>
                     </div>
-                    <div class="contact-info">
-                        <h3>Telefon</h3>
-                        <p>+48 666 913 017</p>
-                    </div>
+                                         <div class="contact-info">
+                         <h3 data-lang="pl">Telefon</h3>
+                         <h3 data-lang="en">Phone</h3>
+                         <p>
+                             <a href="tel:+48666913017" class="phone-link">+48 666 913 017</a>
+                             <button onclick="copyPhone()" class="copy-phone-btn" title="Skopiuj numer telefonu">
+                                 <i class="fas fa-copy"></i>
+                             </button>
+                         </p>
+                     </div>
                 </div>
-                
+
                 <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                                         <div class="contact-info">
+                         <h3 data-lang="pl">WhatsApp</h3>
+                         <h3 data-lang="en">WhatsApp</h3>
+                         <p>
+                             <a href="https://wa.me/48666913017?text=Witam!%20Piszę%20z%20CV" class="whatsapp-link" target="_blank">@batsnuff</a>
+                             <button onclick="copyWhatsApp()" class="copy-whatsapp-btn" title="Skopiuj nazwę WhatsApp">
+                                 <i class="fas fa-copy"></i>
+                             </button>
+                         </p>
+                     </div>
+                </div>
+
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <div class="contact-info">
-                        <h3>Email</h3>
-                        <p>miloszszczepaniak@gmail.com</p>
-                    </div>
+                                         <div class="contact-info">
+                         <h3 data-lang="pl">Email</h3>
+                         <h3 data-lang="en">Email</h3>
+                         <p>
+                             <a href="mailto:miloszszczepaniak@gmail.com?subject=Wiadomość%20z%20CV" class="email-link">miloszszczepaniak@gmail.com</a>
+                             <button onclick="copyEmail()" class="copy-email-btn" title="Skopiuj adres email">
+                                 <i class="fas fa-copy"></i>
+                             </button>
+                         </p>
+                     </div>
                 </div>
             </div>
         </div>
@@ -106,66 +158,174 @@
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Umiejętności IT</h2>
+                         <h2 class="section-title" data-aos="fade-up" data-lang="pl">
+                 Umiejętności IT
+                 <span class="expand-hint">kliknij i rozwiń</span>
+             </h2>
+             <h2 class="section-title" data-aos="fade-up" data-lang="en">
+                 IT Skills
+                 <span class="expand-hint">click and expand</span>
+             </h2>
             <div class="skills-grid">
                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="skill-header">
-                        <h3>HTML</h3>
-                        <span class="skill-level skill-good">Good</span>
-                    </div>
+                                         <div class="skill-header">
+                         <h3>HTML & CSS</h3>
+                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress skill-good-progress"></div>
                     </div>
+                                         <div class="skill-details">
+                         <ul>
+                             <li data-lang="pl">Semantyczna struktura HTML5</li>
+                             <li data-lang="en">Semantic HTML5 structure</li>
+                             <li data-lang="pl">Responsywny design CSS</li>
+                             <li data-lang="en">Responsive CSS design</li>
+                             <li data-lang="pl">Flexbox i Grid</li>
+                             <li data-lang="en">Flexbox and Grid</li>
+                             <li data-lang="pl">CSS animacje i przejścia</li>
+                             <li data-lang="en">CSS animations and transitions</li>
+                             <li data-lang="pl">SCSS/Sass preprocesor</li>
+                             <li data-lang="en">SCSS/Sass preprocessor</li>
+                         </ul>
+                     </div>
                 </div>
                 
                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="skill-header">
-                        <h3>CSS</h3>
-                        <span class="skill-level skill-good">Good</span>
-                    </div>
+                                         <div class="skill-header">
+                         <h3>JavaScript</h3>
+                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress skill-good-progress"></div>
+                        <div class="skill-progress skill-intermediate-progress"></div>
                     </div>
+                                         <div class="skill-details">
+                         <ul>
+                             <li data-lang="pl">ES6+ nowoczesne składnie</li>
+                             <li data-lang="en">ES6+ modern syntax</li>
+                             <li data-lang="pl">DOM manipulacja</li>
+                             <li data-lang="en">DOM manipulation</li>
+                             <li data-lang="pl">Asynchroniczne programowanie</li>
+                             <li data-lang="en">Asynchronous programming</li>
+                             <li data-lang="pl">Obsługa API REST</li>
+                             <li data-lang="en">REST API handling</li>
+                             <li data-lang="pl">Zarządzanie stanem aplikacji</li>
+                             <li data-lang="en">Application state management</li>
+                         </ul>
+                     </div>
                 </div>
                 
                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="skill-header">
-                        <h3>JavaScript</h3>
-                        <span class="skill-level skill-intermediate">Intermediate</span>
-                    </div>
+                                         <div class="skill-header">
+                         <h3>Python</h3>
+                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress skill-intermediate-progress"></div>
                     </div>
+                                         <div class="skill-details">
+                         <ul>
+                             <li data-lang="pl">Automatyczna analiza danych</li>
+                             <li data-lang="en">Data analysis automation</li>
+                             <li data-lang="pl">Biblioteki: Pandas, NumPy</li>
+                             <li data-lang="en">Libraries: Pandas, NumPy</li>
+                             <li data-lang="pl">Web scraping z BeautifulSoup</li>
+                             <li data-lang="en">Web scraping with BeautifulSoup</li>
+                             <li data-lang="pl">API development z FastAPI</li>
+                             <li data-lang="en">API development with FastAPI</li>
+                             <li data-lang="pl">Machine Learning z scikit-learn</li>
+                             <li data-lang="en">Machine Learning with scikit-learn</li>
+                         </ul>
+                     </div>
                 </div>
                 
                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="skill-header">
-                        <h3>Linux</h3>
-                        <span class="skill-level skill-intermediate">Intermediate</span>
-                    </div>
+                                         <div class="skill-header">
+                         <h3>Linux</h3>
+                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress skill-intermediate-progress"></div>
                     </div>
+                                         <div class="skill-details">
+                         <ul>
+                             <li data-lang="pl">Administracja systemem Ubuntu/Debian</li>
+                             <li data-lang="en">Ubuntu/Debian system administration</li>
+                             <li data-lang="pl">Zarządzanie procesami i usługami</li>
+                             <li data-lang="en">Process and service management</li>
+                             <li data-lang="pl">Konfiguracja sieci i firewall</li>
+                             <li data-lang="en">Network and firewall configuration</li>
+                             <li data-lang="pl">Bash scripting i automatyzacja</li>
+                             <li data-lang="en">Bash scripting and automation</li>
+                             <li data-lang="pl">Zarządzanie pakietami APT</li>
+                             <li data-lang="en">APT package management</li>
+                         </ul>
+                     </div>
                 </div>
                 
                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="skill-header">
-                        <h3>Python</h3>
-                        <span class="skill-level skill-intermediate">Intermediate</span>
-                    </div>
+                                         <div class="skill-header">
+                         <h3>AI Prompt Engineering</h3>
+                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress skill-intermediate-progress"></div>
                     </div>
+                                         <div class="skill-details">
+                         <ul>
+                             <li data-lang="pl">Inżynieria promptów AI ukierunkowana na muzykę</li>
+                             <li data-lang="en">Music-focused AI prompt engineering</li>
+                             <li data-lang="pl">Inżynieria promptów AI ukierunkowana na fotografie</li>
+                             <li data-lang="en">Photo-focused AI prompt engineering</li>
+                             <li data-lang="pl">Inżynieria promptów AI ukierunkowana na wideo</li>
+                             <li data-lang="en">Video-focused AI prompt engineering</li>
+                             <li data-lang="pl">Inżynieria promptów AI ukierunkowana na kodowanie</li>
+                             <li data-lang="en">Coding-focused AI prompt engineering</li>
+                             <li data-lang="pl">Inżynieria promptów AI ukierunkowana na pisanie kreatywne</li>
+                             <li data-lang="en">Creative writing-focused AI prompt engineering</li>
+                         </ul>
+                     </div>
                 </div>
                 
                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="skill-header">
-                        <h3>SQL</h3>
-                        <span class="skill-level skill-beginner">Beginner</span>
-                    </div>
+                                         <div class="skill-header">
+                         <h3>SQL</h3>
+                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress skill-beginner-progress"></div>
+                        <div class="skill-progress skill-intermediate-progress"></div>
                     </div>
+                                         <div class="skill-details">
+                         <ul>
+                             <li data-lang="pl">Optymalizacja zapytań</li>
+                             <li data-lang="en">Query optimization</li>
+                             <li data-lang="pl">Projektowanie schematów baz danych</li>
+                             <li data-lang="en">Database schema design</li>
+                             <li data-lang="pl">Indeksy i klucze obce</li>
+                             <li data-lang="en">Indexes and foreign keys</li>
+                             <li data-lang="pl">Procedury składowane</li>
+                             <li data-lang="en">Stored procedures</li>
+                             <li data-lang="pl">Transakcje i bezpieczeństwo danych</li>
+                             <li data-lang="en">Transactions and data security</li>
+                         </ul>
+                     </div>
+                </div>
+                
+                <div class="skill-card" data-aos="zoom-in" data-aos-delay="700">
+                                         <div class="skill-header">
+                         <h3>Software Testing / QA</h3>
+                     </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress skill-intermediate-progress"></div>
+                    </div>
+                                         <div class="skill-details">
+                         <ul>
+                             <li data-lang="pl">Jira</li>
+                             <li data-lang="en">Jira</li>
+                             <li data-lang="pl">Figma</li>
+                             <li data-lang="en">Figma</li>
+                             <li data-lang="pl">ISTQB</li>
+                             <li data-lang="en">ISTQB</li>
+                             <li data-lang="pl">Testowanie manualne</li>
+                             <li data-lang="en">Manual testing</li>
+                             <li data-lang="pl">Postman</li>
+                             <li data-lang="en">Postman</li>
+                         </ul>
+                     </div>
                 </div>
             </div>
         </div>
@@ -174,31 +334,38 @@
     <!-- Soft Skills -->
     <section class="soft-skills-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Umiejętności Miękkie</h2>
+                         <h2 class="section-title" data-aos="fade-up" data-lang="pl">Umiejętności Miękkie</h2>
+             <h2 class="section-title" data-aos="fade-up" data-lang="en">Soft Skills</h2>
             <div class="soft-skills-grid">
-                <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="100">
-                    <div class="soft-skill-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Independence</h3>
-                    <p>Bond to personal and professional development</p>
-                </div>
-                
-                <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="200">
-                    <div class="soft-skill-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Creativity</h3>
-                    <p>Good knowledge of prompt engineering</p>
-                </div>
-                
-                <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="300">
-                    <div class="soft-skill-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Analytical thinking</h3>
-                    <p>Detail-oriented approach</p>
-                </div>
+                                 <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="100">
+                     <div class="soft-skill-icon">
+                         <i class="fas fa-lightbulb"></i>
+                     </div>
+                     <h3 data-lang="pl">Niezależność</h3>
+                     <h3 data-lang="en">Independence</h3>
+                     <p data-lang="pl">Przywiązanie do osobistego i zawodowego rozwoju</p>
+                     <p data-lang="en">Commitment to personal and professional development</p>
+                 </div>
+                 
+                 <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="200">
+                     <div class="soft-skill-icon">
+                         <i class="fas fa-palette"></i>
+                     </div>
+                     <h3 data-lang="pl">Kreatywność</h3>
+                     <h3 data-lang="en">Creativity</h3>
+                     <p data-lang="pl">Dobra znajomość inżynierii promptów</p>
+                     <p data-lang="en">Good knowledge of prompt engineering</p>
+                 </div>
+                 
+                 <div class="soft-skill-card" data-aos="flip-left" data-aos-delay="300">
+                     <div class="soft-skill-icon">
+                         <i class="fas fa-brain"></i>
+                     </div>
+                     <h3 data-lang="pl">Myślenie analityczne</h3>
+                     <h3 data-lang="en">Analytical thinking</h3>
+                     <p data-lang="pl">Podejście ukierunkowane na szczegóły</p>
+                     <p data-lang="en">Detail-oriented approach</p>
+                 </div>
             </div>
         </div>
     </section>
@@ -206,31 +373,35 @@
     <!-- Experience Section -->
     <section id="experience" class="experience-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Doświadczenie (pełna lista na <b>LinkedIn</b>)</h2>
+                         <h2 class="section-title" data-aos="fade-up" data-lang="pl">Doświadczenie (pełna lista na <b>LinkedIn</b>)</h2>
+             <h2 class="section-title" data-aos="fade-up" data-lang="en">Experience (full list on <b>LinkedIn</b>)</h2>
             <div class="timeline">
-                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
-                    <div class="timeline-content">
-                        <div class="timeline-date">01-06.2017</div>
-                        <h3>Nasto%</h3>
-                        <p>Animator and Event organizer</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
-                    <div class="timeline-content">
-                        <div class="timeline-date">06.2017-06.2018</div>
-                        <h3>DGS</h3>
-                        <p>SMT machine operator</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
-                    <div class="timeline-content">
-                        <div class="timeline-date">08-12.2021</div>
-                        <h3>Byens Tømrerentreprise</h3>
-                        <p>Carpenter</p>
-                    </div>
-                </div>
+                                 <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                     <div class="timeline-content">
+                         <div class="timeline-date">01-06.2017</div>
+                         <h3>Nasto%</h3>
+                         <p data-lang="pl">Animator i organizator wydarzeń</p>
+                         <p data-lang="en">Animator and Event organizer</p>
+                     </div>
+                 </div>
+                 
+                 <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                     <div class="timeline-content">
+                         <div class="timeline-date">06.2017-06.2018</div>
+                         <h3>DGS</h3>
+                         <p data-lang="pl">Operator maszyny SMT</p>
+                         <p data-lang="en">SMT machine operator</p>
+                     </div>
+                 </div>
+                 
+                 <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                     <div class="timeline-content">
+                         <div class="timeline-date">08-12.2021</div>
+                         <h3>Byens Tømrerentreprise</h3>
+                         <p data-lang="pl">Stolarz</p>
+                         <p data-lang="en">Carpenter</p>
+                     </div>
+                 </div>
             </div>
         </div>
     </section>
@@ -238,7 +409,8 @@
     <!-- Social Section -->
     <section class="social-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Social Media</h2>
+                         <h2 class="section-title" data-aos="fade-up" data-lang="pl">Social Media</h2>
+             <h2 class="section-title" data-aos="fade-up" data-lang="en">Social Media</h2>
             <div class="social-grid">
                 <a href="https://twitter.com/batsnuff" target="_blank" class="social-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="social-icon twitter">
@@ -264,10 +436,108 @@
         </div>
     </section>
 
+    <!-- Documents Section -->
+    <section class="documents-section">
+        <div class="container">
+                         <h2 class="section-title" data-aos="fade-up" data-lang="pl">Dokumenty</h2>
+             <h2 class="section-title" data-aos="fade-up" data-lang="en">Documents</h2>
+            <div class="documents-grid">
+                <div class="document-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="document-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="document-content">
+                                                 <h3 data-lang="pl">CV / Resume</h3>
+                         <h3 data-lang="en">CV / Resume</h3>
+                         <p data-lang="pl">Pełne CV w formacie PDF</p>
+                         <p data-lang="en">Full CV in PDF format</p>
+                                                 <div class="document-links">
+                             <a href="https://drive.google.com/file/d/1Hah_0e0vQBxghaXIX7Qk1I3nBOh31ql2/view?usp=drive_link" class="document-link" target="_blank" data-lang="pl">
+                                 <i class="fas fa-download"></i>
+                                 Pobierz CV (PL)
+                             </a>
+                             <a href="https://drive.google.com/file/d/1J0sVdleEILDnkk9R7rIs8rAyvCj00u1e/view?usp=drive_link" class="document-link" target="_blank" data-lang="en">
+                                 <i class="fas fa-download"></i>
+                                 Download CV (EN)
+                             </a>
+                             <a href="https://drive.google.com/file/d/1Hah_0e0vQBxghaXIX7Qk1I3nBOh31ql2/view?usp=drive_link" class="document-link google-drive" target="_blank" data-lang="pl">
+                                 <i class="fab fa-google-drive"></i>
+                                 <span data-lang="pl">Dysk Google</span>
+                                 <span data-lang="en">Google Drive</span>
+                             </a>
+                             <a href="https://drive.google.com/file/d/1J0sVdleEILDnkk9R7rIs8rAyvCj00u1e/view?usp=drive_link" class="document-link google-drive" target="_blank" data-lang="en">
+                                 <i class="fab fa-google-drive"></i>
+                                 <span data-lang="pl">Dysk Google</span>
+                                 <span data-lang="en">Google Drive</span>
+                             </a>
+                         </div>
+                         <div class="security-indicators">
+                             <span class="security-badge secure">
+                                 <i class="fas fa-shield-alt"></i>
+                                 <span data-lang="pl">Bezpieczny link</span>
+                                 <span data-lang="en">Secure link</span>
+                             </span>
+                             <span class="security-badge verified">
+                                 <i class="fas fa-check-circle"></i>
+                                 <span data-lang="pl">Zweryfikowany</span>
+                                 <span data-lang="en">Verified</span>
+                             </span>
+                         </div>
+                    </div>
+                </div>
+                
+                <div class="document-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="document-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="document-content">
+                                                 <h3 data-lang="pl">List Motywacyjny</h3>
+                         <h3 data-lang="en">Cover Letter</h3>
+                         <p data-lang="pl">List motywacyjny w formacie PDF</p>
+                         <p data-lang="en">Cover letter in PDF format</p>
+                                                 <div class="document-links">
+                             <a href="https://drive.google.com/file/d/1UWWeXnys2E9h9YzSMnCIbS49czDj-yYR/view?usp=drive_link" class="document-link" target="_blank" data-lang="pl">
+                                 <i class="fas fa-download"></i>
+                                 Pobierz list (PL)
+                             </a>
+                             <a href="https://drive.google.com/file/d/1zUiFbTaaBwpZbZVCytVPRK1cK4S3dyGA/view?usp=drive_link" class="document-link" target="_blank" data-lang="en">
+                                 <i class="fas fa-download"></i>
+                                 Download letter (EN)
+                             </a>
+                             <a href="https://drive.google.com/file/d/1UWWeXnys2E9h9YzSMnCIbS49czDj-yYR/view?usp=drive_link" class="document-link google-drive" target="_blank" data-lang="pl">
+                                 <i class="fab fa-google-drive"></i>
+                                 <span data-lang="pl">Dysk Google</span>
+                                 <span data-lang="en">Google Drive</span>
+                             </a>
+                             <a href="https://drive.google.com/file/d/1zUiFbTaaBwpZbZVCytVPRK1cK4S3dyGA/view?usp=drive_link" class="document-link google-drive" target="_blank" data-lang="en">
+                                 <i class="fab fa-google-drive"></i>
+                                 <span data-lang="pl">Dysk Google</span>
+                                 <span data-lang="en">Google Drive</span>
+                             </a>
+                         </div>
+                         <div class="security-indicators">
+                             <span class="security-badge secure">
+                                 <i class="fas fa-shield-alt"></i>
+                                 <span data-lang="pl">Bezpieczny link</span>
+                                 <span data-lang="en">Secure link</span>
+                             </span>
+                             <span class="security-badge verified">
+                                 <i class="fas fa-check-circle"></i>
+                                 <span data-lang="pl">Zweryfikowany</span>
+                                 <span data-lang="en">Verified</span>
+                             </span>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Milosz Szczepaniak. All rights reserved.</p>
+                         <p data-lang="pl">&copy; 2024 Milosz Szczepaniak. Wszystkie prawa zastrzeżone.</p>
+             <p data-lang="en">&copy; 2024 Milosz Szczepaniak. All rights reserved.</p>
         </div>
     </footer>
 
