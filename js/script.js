@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     initScrollEffects();
     initSkillAnimations();
+    initSkillToggle();
     initParallaxEffects();
     initTypingEffect();
     initParticleBackground();
@@ -118,8 +119,33 @@ function initSkillAnimations() {
     skillBars.forEach(bar => {
         skillObserver.observe(bar);
     });
-    
+}
 
+// Skill Toggle Functionality
+function initSkillToggle() {
+    const skillHeaders = document.querySelectorAll('.skill-header');
+
+    skillHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const skillCard = this.closest('.skill-card');
+            const skillDetails = skillCard.querySelector('.skill-details');
+
+            // Toggle expanded class
+            skillCard.classList.toggle('expanded');
+
+            // Toggle visibility with smooth animation
+            if (skillCard.classList.contains('expanded')) {
+                skillDetails.style.display = 'block';
+                // Trigger animation
+                skillDetails.style.animation = 'fadeIn 0.3s ease-in-out';
+            } else {
+                skillDetails.style.animation = 'fadeOut 0.3s ease-in-out';
+                setTimeout(() => {
+                    skillDetails.style.display = 'none';
+                }, 300);
+            }
+        });
+    });
 }
 
 // Parallax Effects

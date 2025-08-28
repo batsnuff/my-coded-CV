@@ -9,6 +9,351 @@
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
+/* Skills Section Styles */
+.skills-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.skill-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-color, #2f5a78);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 16px;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+}
+
+.skill-header:hover {
+  color: var(--primary-color, #2f5a78);
+}
+
+.skill-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  transition: color 0.3s ease;
+}
+
+.skill-toggle-icon {
+  font-size: 1.2rem;
+  color: #64748b;
+  transition: all 0.3s ease;
+  margin-left: 12px;
+}
+
+.skill-card.expanded .skill-toggle-icon {
+  transform: rotate(180deg);
+  color: var(--primary-color, #2f5a78);
+}
+
+.skill-bar {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1.5s ease-in-out;
+  position: relative;
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.skill-good-progress {
+  background: linear-gradient(90deg, #10b981, #059669);
+  width: 85%;
+}
+
+.skill-intermediate-progress {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+  width: 75%;
+}
+
+.skill-beginner-progress {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+  width: 45%;
+}
+
+.skill-details {
+  display: none;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.skill-card.expanded .skill-details {
+  display: block;
+}
+
+.skill-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-details li {
+  padding: 8px 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 20px;
+}
+
+.skill-details li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color, #2f5a78);
+  font-weight: bold;
+}
+
+.expand-hint {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-style: italic;
+  margin-left: 8px;
+}
+
+/* Dark theme support */
+.dark-theme .skill-card {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+.dark-theme .skill-header h3 {
+  color: #f1f5f9;
+}
+
+.dark-theme .skill-bar {
+  background: #334155;
+}
+
+.dark-theme .skill-details {
+  border-top-color: #334155;
+}
+
+.dark-theme .skill-details li {
+  color: #cbd5e1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Projects Section Styles */
+.projects-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-color, #2f5a78);
+}
+
+.project-icon {
+  font-size: 3rem;
+  color: var(--primary-color, #2f5a78);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+  transform: scale(1.1);
+  color: #10b981;
+}
+
+.project-content h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.project-content p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--primary-color, #2f5a78);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: #10b981;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.github-link {
+  background: #24292e;
+}
+
+.github-link:hover {
+  background: #444;
+  box-shadow: 0 4px 12px rgba(68, 68, 68, 0.3);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tech-tag {
+  background: #e2e8f0;
+  color: #475569;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: var(--primary-color, #2f5a78);
+  color: white;
+}
+
+/* Special React icon styling */
+.project-card:nth-child(1) .project-icon .fa-react {
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dark theme support */
+.dark-theme .project-card {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+.dark-theme .project-content h3 {
+  color: #f1f5f9;
+}
+
+.dark-theme .project-content p {
+  color: #cbd5e1;
+}
+
+.dark-theme .tech-tag {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+.dark-theme .tech-tag:hover {
+  background: #10b981;
+  color: white;
+}
+
 
 /* Part for IT Skills */
 

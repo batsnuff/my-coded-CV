@@ -1,44 +1,146 @@
-# My CV Project
+# My CV - React Version 🚀
 
-## Overview
-This project is a my personal CV webpage designed to showcase the skills and experiences. The webpage is structured with different sections to provide a comprehensive overview of my professional background.
+Nowoczesna wersja CV stworzona w React z zaawansowanymi animacjami i interaktywnymi elementami.
 
-## File Structure
-- **index.html:** The main HTML file that structures the entire CV webpage.
-- **css/style.css:** Stylesheet file containing the general styling for the webpage.
-- **css/experience.css:** Stylesheet file specific to the experience section styling.
-- **css/intro.css:** Stylesheet file for the introductory section styling.
-- **css/contactInfo.css:** Stylesheet file for the contact information section styling.
-- **css/skills.css:** Stylesheet file for the skills section styling.
-- **css/social.css:** Stylesheet file for the social media links section styling.
-- **js/script.js:** JavaScript file for handling dynamic behavior and interactions on the webpage.
-- **README.md:** This file, providing an overview of the project.
+## ✨ **Funkcje**
 
-## Sections
+- 🎨 **Ciemny/Jasny motyw** z automatycznym zapisem preferencji
+- 🌍 **Dwujęzyczność** (Polski/Angielski) z przełącznikiem
+- 🎭 **Zaawansowane animacje** z Framer Motion
+- 📱 **W pełni responsywny design**
+- 🎯 **Interaktywne karty umiejętności** z rozwijanymi szczegółami
+- 📋 **Sekcja projektów** przygotowana na przyszłe projekty
+- 📞 **Interaktywne dane kontaktowe** z funkcją kopiowania
+- 📄 **Linki do dokumentów** (CV i List Motywacyjny)
 
-### Intro
-- Displays my profile picture, professional status, and a brief summary of my hobbies and interests.
+## 🛠️ **Technologie**
 
-### Contact Information
-- Includes my address, phone number, and email address.
+- **React 18** - Nowoczesny framework
+- **Framer Motion** - Zaawansowane animacje
+- **CSS Variables** - Dynamiczne motywy kolorystyczne
+- **Responsive Design** - Mobile-first approach
+- **Local Storage** - Zapisywanie preferencji użytkownika
 
-### Skills
-- Lists my IT skills with a rating, showcasing my proficiency in HTML, CSS, JavaScript, Linux, Python, and SQL.
+## 🚀 **Uruchomienie**
 
-### Soft Skills
-- Highlights my soft skills, including independence, analytical thinking, creativity, prompt engineering, and a detail-oriented approach.
+### Wymagania
+- Node.js (wersja 16 lub nowsza)
+- npm lub yarn
 
-### Experience/Education
-- Presents a table with details of my work experiences, including company names, timeframes, and roles.
+### Instalacja
+```bash
+# Instalacja zależności
+npm install
 
-### Social
-- Provides links to my social media profiles on Twitter, LinkedIn, and GitHub.
+# Uruchomienie w trybie deweloperskim
+npm start
 
-## External Dependencies
-- [Font Awesome](https://kit.fontawesome.com/b99e675b6e.js): External script for using Font Awesome icons.
+# Budowanie do produkcji
+npm run build
+```
 
-## Usage
-1. Open the [LINK](https://batsnuff.github.io/my-coded-CV/) in a web browser to view my CV.
-2. Navigate through different sections to explore his skills, experiences, and social links.
+### Struktura projektu
+```
+src/
+├── App.js          # Główny komponent aplikacji
+├── App.css         # Style głównego komponentu
+├── index.js        # Punkt wejścia aplikacji
+└── index.css       # Globalne style
+```
 
-Feel free to customize and expand upon this project to suit your needs.
+## 🎯 **Sekcje CV**
+
+### 1. **Hero Section**
+- Imię i nazwisko z animacją
+- Tytuł zawodowy
+- Zainteresowania i hobby
+
+### 2. **Umiejętności IT**
+- **HTML & CSS** - Semantyczna struktura, responsywność, Flexbox/Grid
+- **JavaScript** - ES6+, DOM, async programming, REST API
+- **Python** - Data analysis, web scraping, FastAPI, ML
+- **Linux** - Ubuntu/Debian admin, networking, bash scripting
+- **AI Prompt Engineering** - Specjalizacje muzyczne, fotograficzne, wideo
+- **SQL** - Query optimization, database design, stored procedures
+- **Software Testing/QA** - Jira, Figma, ISTQB, manual testing, Postman
+
+### 3. **Projekty** 🆕
+- **React Projects** - Aplikacje webowe z nowoczesnymi technologiami
+- **Python Projects** - Automatyzacja i analiza danych
+
+### 4. **Kontakt**
+- Adres (Hengelo, Netherlands)
+- Telefon (+48 666 913 017)
+- WhatsApp (@batsnuff)
+- Email (miloszszczepaniak@gmail.com)
+
+### 5. **Dokumenty**
+- CV w wersji polskiej i angielskiej
+- List motywacyjny w wersji polskiej i angielskiej
+
+## 🎨 **Motywy kolorystyczne**
+
+### Jasny motyw
+- Tło: #ffffff
+- Powierzchnie: #f8fafc
+- Tekst: #1e293b
+- Akcent: #2563eb
+
+### Ciemny motyw
+- Tło: #0f172a
+- Powierzchnie: #1e293b
+- Tekst: #f1f5f9
+- Akcent: #3b82f6
+
+## 📱 **Responsywność**
+
+- **Desktop**: Grid layout z 3+ kolumnami
+- **Tablet**: Grid layout z 2 kolumnami
+- **Mobile**: Single column layout
+- **Breakpoints**: 768px, 480px
+
+## 🔧 **Dostosowywanie**
+
+### Dodawanie nowych umiejętności
+Edytuj tablicę `skills` w `App.js`:
+
+```javascript
+{
+  name: 'Nazwa umiejętności',
+  level: 'intermediate', // 'good', 'intermediate', 'beginner'
+  details: [
+    { pl: 'Opis po polsku', en: 'Description in English' },
+    // ... więcej szczegółów
+  ]
+}
+```
+
+### Dodawanie projektów
+Edytuj tablicę `projects` w `App.js`:
+
+```javascript
+{
+  name: { pl: 'Nazwa po polsku', en: 'Name in English' },
+  icon: '🚀',
+  description: { pl: 'Opis po polsku', en: 'Description in English' },
+  color: '#custom-color'
+}
+```
+
+## 🚀 **Deployment**
+
+Aplikacja jest gotowa do wdrożenia na:
+- **Netlify** - Drag & drop `build` folder
+- **Vercel** - Connect GitHub repository
+- **GitHub Pages** - `npm run build` + deploy `build` folder
+- **AWS S3** - Upload `build` folder
+
+## 📝 **Licencja**
+
+MIT License - Swobodne użytkowanie i modyfikacja.
+
+---
+
+**Autor**: Milosz Szczepaniak  
+**Technologie**: React, Framer Motion, Modern CSS  
+**Status**: Gotowe do wdrożenia 🎯

@@ -33,3 +33,29 @@
   font-size: 24px;
 }
 
+/* LinkedIn and GitHub in Contact Section */
+.contact-icon.linkedin {
+  background: linear-gradient(135deg, #0077b5, #005582);
+  color: white;
+}
+
+.contact-icon.github {
+  background: linear-gradient(135deg, #24292e, #1a1e22);
+  color: white;
+}
+
+.linkedin-link, .github-link {
+  color: var(--primary-color, #2f5a78);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+  color: #0077b5;
+}
+
+.github-link:hover {
+  color: #24292e;
+}
+
