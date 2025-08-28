@@ -126,6 +126,7 @@ function initSkillToggle() {
     const skillHeaders = document.querySelectorAll('.skill-header');
 
     skillHeaders.forEach(header => {
+        // Existing click functionality
         header.addEventListener('click', function() {
             const skillCard = this.closest('.skill-card');
             const skillDetails = skillCard.querySelector('.skill-details');
@@ -139,6 +140,33 @@ function initSkillToggle() {
                 // Trigger animation
                 skillDetails.style.animation = 'fadeIn 0.3s ease-in-out';
             } else {
+                skillDetails.style.animation = 'fadeOut 0.3s ease-in-out';
+                setTimeout(() => {
+                    skillDetails.style.display = 'none';
+                }, 300);
+            }
+        });
+
+        // New hover functionality
+        header.addEventListener('mouseenter', function() {
+            const skillCard = this.closest('.skill-card');
+            const skillDetails = skillCard.querySelector('.skill-details');
+
+            // Only expand on hover if not already expanded by click
+            if (!skillCard.classList.contains('expanded')) {
+                skillCard.classList.add('hovered');
+                skillDetails.style.display = 'block';
+                skillDetails.style.animation = 'fadeIn 0.3s ease-in-out';
+            }
+        });
+
+        header.addEventListener('mouseleave', function() {
+            const skillCard = this.closest('.skill-card');
+            const skillDetails = skillCard.querySelector('.skill-details');
+
+            // Only collapse on mouseleave if expanded by hover (not by click)
+            if (skillCard.classList.contains('hovered') && !skillCard.classList.contains('expanded')) {
+                skillCard.classList.remove('hovered');
                 skillDetails.style.animation = 'fadeOut 0.3s ease-in-out';
                 setTimeout(() => {
                     skillDetails.style.display = 'none';
