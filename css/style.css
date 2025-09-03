@@ -227,6 +227,11 @@ body.dark-theme .hamburger span {
     background: var(--dark-text-primary);
 }
 
+body.dark-theme .nav-menu.active {
+    background: rgba(15, 23, 42, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
 body.dark-theme .skills-section {
     background: var(--dark-bg-primary);
 }
@@ -382,6 +387,53 @@ body.dark-theme .whatsapp-link:hover {
     background: var(--text-primary);
     margin: 3px 0;
     transition: 0.3s;
+}
+
+/* Mobile Navigation Active States */
+.nav-menu.active {
+    display: flex !important;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Navigation Links */
+.nav-menu.active .nav-link {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu.active .nav-link:hover {
+    background: var(--gradient-primary);
+    color: white;
+    transform: scale(1.05);
 }
 
 /* Hero Section */
